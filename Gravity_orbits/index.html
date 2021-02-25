@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sun Earth Simulation</title>
+</head>
+<style type="text/css">
+.sim{
+	width: 812.188px;
+	height: 500px;
+	overflow: scroll;
+}
+#simcanvas{
+	background-image: url('Images/space.jpg');
+}
+.toolbox{
+	width: 810.188px;
+	margin-top: 5px;
+}
+#colour{
+	width: 20px;
+}
+#mass{
+	width: 55px;
+}
+#velx, #vely{
+	width: 60px;
+}
+#unitsthing{
+	float: right;
+}
+</style>
+<body>
+	<div class="sim">
+		<canvas id="simcanvas" width="2000" height="1500"></canvas>
+	</div>
+
+	<div class="toolbox">
+		<span><input type="image" src="Images/pause.png" id="pauseplay" onclick="pause_play()"></span>
+		<span><input type="image" src="Images/restart.png" id="restart" onclick="initial()"></span>
+		<span id="new_body">
+			Click to add new body | </span>
+		<span class="cmv">
+			colour: <input type="color" id="colour" value="#5d8aa8"> 
+			mass: <input type="number" id="mass" value="1"> x10<sup id="super">22</sup>kg
+		 	velocity: ( <input type="number" id="velx" value="8"> , <input type="number" id="vely" value="0"> )
+
+		</span>
+		<span id="unitsthing">x(3.3x10<sup id="super">-8</sup>AU day<sup id="super">-1</sup>)</span>
+	</div>
+
+<script src="gravsim.js"></script>
+</body>
+</html>
